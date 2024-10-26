@@ -1,4 +1,4 @@
-import org.example;
+package org.example;
 import java.util.Scanner;  
   
 public class NumberFeature {  
