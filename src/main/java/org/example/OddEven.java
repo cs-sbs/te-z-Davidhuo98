@@ -1,25 +1,37 @@
-package org.example;
-
 import java.util.Scanner;
 
-public class OddEven {
+public class OddEvenCounter {
     public static void main(String[] args) {
-        int number;
-        int countOdd = 0;
-        int countEven = 0;
-        Scanner in = new Scanner(System.in); // 数字用空格或换行隔开，每次读入一个，直到输入‘-1’
-        do{
-            number = in.nextInt();
-            if(number != -1)
-            {
-                if (number % 2 == 0) {
-                    countEven += 1;
-                } else {
-                    countOdd += 1;
-                }
+        Scanner scanner = new Scanner(System.in);
+        int oddCount = 0;
+        int evenCount = 0;
+
+        System.out.println("请输入一系列正整数，输入-1表示结束：");
+
+        while (true) {
+
+            System.out.print("请输入一个数字：");
+
+
+            int num = scanner.nextInt();
+
+
+            if (num == -1) {
+                break;
             }
-        }while(number != -1); // 理解do while和while循环的区别
-        System.out.print(countOdd+" ");
-        System.out.println(countEven);
+
+
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+
+        System.out.println("奇数个数：" + oddCount + "，偶数个数：" + evenCount);
+
+
+        scanner.close();
     }
 }
