@@ -1,3 +1,4 @@
+import org.example.NumberFeature
 import java.util.Scanner;  
   
 public class NumberFeature {  
